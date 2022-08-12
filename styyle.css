@@ -17,7 +17,7 @@
      
  }
  .main-nav {
-   
+  
    position: absolute;
    width: 100%;
    overflow: hidden;
@@ -28,8 +28,9 @@
 .logo {
    float: left;
    color: aliceblue;
-   padding-left: 50px;
+   padding-left: 35px;
    padding-top: 15px;
+
 }
 .main-nav li{
 float: right;
@@ -39,12 +40,19 @@ margin: 10px;
 
 }
 .main-nav li a{
+   display: none;
     color: whitesmoke;
      font-size: 20px;
 text-decoration: none;
   text-align: center;
   display: block;
 }
+.main-nav li a:hover{
+   border-bottom: rgb(30, 177, 177) 2px solid;
+
+}
+
+
 .main-heading{
    color: aliceblue;
    font-size: 100px;
@@ -79,7 +87,7 @@ left: 5%;
    position: absolute;
    list-style: none;
    right: 0px;
-   top: 80%;
+   top: 70%;
    margin: 1rem 0 1rem 0;
 }
 
@@ -121,7 +129,7 @@ padding: 10px;
   display: flex;
 align-items: center;
 justify-content: center;
-padding-bottom: 90px;
+padding-bottom: 40px;
 
  }
  /*
@@ -147,9 +155,53 @@ max-height: 800px;
    width: 400px;
    padding: 9px;
   }
- 
-  
+  .middle {
+  transition: .1s ease;
+   opacity: 0;
+   position: absolute;
+   left: 30%;
+   top:17%;
+
+   -ms-transform: translate(-50%, -50%);
+   text-align: center;
+ }
+ .vectoricon{
    
+   color: white;
+   font-size: 16px;
+   padding: 16px 32px;
+ }
+ .container:hover .middle {
+   opacity: 1;
+ }
+  .dots{
+   justify-content: center;
+   align-items: center;
+   padding: 5px;
+    padding-bottom: 30px;
+  display: flex;
+  background-color: black;
+  }
+  .dot {
+   height: 5px;
+   width: 5px;
+   background-color: rgb(250, 244, 244);
+   border-radius: 50%;
+   display: inline-block;
+
+   margin: 3px;
+
+ }
+ .dat {
+   height: 4px;
+   width: 45px;
+   background-color: rgb(250, 244, 244);
+ border-radius: 50%;
+   display: inline-block;
+  
+   margin: 3px;
+
+ }
  
    
    
@@ -165,16 +217,29 @@ max-height: 800px;
  }
  
  
+ 
  .container{
    padding-top: 30px;
    padding-left: 50px;
 position: relative;
 
  }
+ 
  .left{
    width: 50%;
  }
  
+ .image1 {
+   opacity: 1;
+   color: #000;
+
+   transition: .1s ease;
+
+ }
+ .left:hover .image1 {
+   opacity: 0.3;
+ }  
+      
  
  .right{
   width: 50%;
@@ -197,7 +262,7 @@ top: 20%;
    float: right;
    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
    color: aliceblue;
- right: 31%;
+ right: 32%;
 position: absolute;
 top: 70%;
 }
@@ -219,6 +284,11 @@ top: 70%;
  text-align: center;
    justify-content: center;
    color: aliceblue;
+ }
+ @media (max-width:1700px){
+   .social{
+
+   }
  }
  @media (max-width:1200px){
    .group3 {
@@ -244,7 +314,7 @@ padding-left: 60px;
  }
  .titletext{
    left: 100%;
-   top: 0%;
+   top: 20%;
  }
  .stitletext{
    top:55%;
@@ -257,8 +327,8 @@ padding-left: 60px;
    right: 20%;
  }
  .social{
-   top:40%;
- }
+   top:50%;
+}
 }
  @media (max-width:980px){
 
@@ -271,11 +341,7 @@ padding-left: 60px;
    position: relative;
     
  }
- .stitletext{
-   position: relative;
-  padding-left: 120px;
-   padding: 10px;
- }
+ 
  
  
  .icon {
@@ -288,11 +354,14 @@ padding-left: 60px;
 
  @media (max-width:980px){
   
-
+   html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+  }
 
 
    .group3 {
-      width: 100%;
+      max-width: 100%;
       height: 100%;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -333,15 +402,17 @@ padding-left: 60px;
     }
     .stitletext{
       position: relative;
-     padding-left: 120px;
-      padding: 10px;
+    
+   left:-7%;
+   padding-bottom: 20px;
+
     }
     
     
     .icon {
    
      
-      top: 84%;
+      top: 89%;
       left:70%
     }
     .group2{
@@ -385,14 +456,19 @@ padding-left: 60px;
    padding-top: 10px;
 }
 .main-heading{
-   top:16%;
-   font-size: 90px;
+   top:33%;
+   font-size: 70px;
 }
 .sub-heading{
    top:60%;
 }
+.social{
+   top:50%;
+}
 
 }
+
+
 @media(max-width: 760px){
    .group3 .left img {
       width: 550px;
@@ -431,6 +507,12 @@ padding-left: 60px;
 .sub-heading{
    font-size: 20px;
 }
+.logo{
+   padding-left: 2px;
+}
+.social{
+   top:50%;
+}
 }
 @media(max-width: 582px){
    .group3 .left img {
@@ -467,5 +549,27 @@ padding-left: 60px;
 }
 .sub-heading{
    font-size: 15px;
+}
+
+.main-nav li{
+   padding-right: 0px;
+    float: right;
+   display: block;
+
+
+}
+
+.logo{
+   padding-left: 0px;
+   font-size: 10px;
+}
+.containers{
+   width: 100%;
+}
+.group1{
+   max-width: 100%;
+}
+.social{
+   top:50%;
 }
 }
